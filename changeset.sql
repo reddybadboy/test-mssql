@@ -2,8 +2,6 @@
 
 --changeset liquibase:2
 --Database: testdb4
-CREATE DATABASE employee;
-use employee;
 CREATE TABLE employees
 ( employee_id INT NOT NULL,
   last_name VARCHAR(30) NOT NULL,
