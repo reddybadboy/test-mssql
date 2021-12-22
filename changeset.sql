@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset liquibase:20
+--changeset liquibase:30
 --Database: testdb6
 
 CREATE TABLE hello_9 (test_id INT, test_column VARCHAR, PRIMARY KEY (test_id))
