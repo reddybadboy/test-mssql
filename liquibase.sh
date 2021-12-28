@@ -2,6 +2,8 @@
 #!/bin/bash
 set -x
 cd sqljdbc_9.4/enu
-liquibase --driver=com.microsoft.sqlserver.jdbc.SQLServerDriver --classpath="/home/ubuntu/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre8.jar" --url="jdbc:sqlserver://ec2-18-190-31-213.us-east-2.compute.amazonaws.com:1433;databaseName=testdb1;integratedSecurity=false;" --changeLogFile="changeset.sql"  --username=sa  --password=admin1234 clearCheckSums  ;
-liquibase --driver=com.microsoft.sqlserver.jdbc.SQLServerDriver --classpath="/home/ubuntu/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre8.jar" --url="jdbc:sqlserver://ec2-18-190-31-213.us-east-2.compute.amazonaws.com:1433;databaseName=testdb1;integratedSecurity=false;" --changeLogFile="changeset.sql"  --username=sa  --password=admin1234 update  ;
+liquibase --driver=com.microsoft.sqlserver.jdbc.SQLServerDriver --classpath="/home/ubuntu/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre8.jar" --url="jdbc:sqlserver://newdatabase-2.c1k79dvxt7ab.us-east-2.rds.amazonaws.com:1433;databaseName=data1;integratedSecurity=false;" --changeLogFile="changeset.sql"  --username=admin  --password=admin1234 clearCheckSums  ;
+liquibase --driver=com.microsoft.sqlserver.jdbc.SQLServerDriver --classpath="/home/ubuntu/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre8.jar" --url="jdbc:sqlserver://newdatabase-2.c1k79dvxt7ab.us-east-2.rds.amazonaws.com:1433;databaseName=database1;integratedSecurity=false;" --changeLogFile="changeset.sql"  --username=admin  --password=admin1234 update  ;
+liquibase --driver=com.microsoft.sqlserver.jdbc.SQLServerDriver --classpath="/home/ubuntu/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre8.jar" --url="jdbc:sqlserver://newdatabase.c1k79dvxt7ab.us-east-2.rds.amazonaws.com:1433;databaseName=data1;integratedSecurity=false;" --changeLogFile="changeset.sql"  --username=admin  --password=admin1234 clearCheckSums  ;
+liquibase --driver=com.microsoft.sqlserver.jdbc.SQLServerDriver --classpath="/home/ubuntu/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre8.jar" --url="jdbc:sqlserver://newdatabase.c1k79dvxt7ab.us-east-2.rds.amazonaws.com:1433;databaseName=database1;integratedSecurity=false;" --changeLogFile="changeset.sql"  --username=admin  --password=admin1234 update  ;
 sudo rm -rf sqljdbc_9.4/enu/changset.sql
