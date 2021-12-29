@@ -1,9 +1,9 @@
 --liquibase formatted sql
 
---changeset liquibase:
+--changeset liquibase:2
 --Database: database1
 
-CREATE TABLE rey (test_id INT, test_column VARCHAR, PRIMARY KEY (test_id))
+CREATE TABLE hi-1 (test_id INT, test_column VARCHAR, PRIMARY KEY (test_id))
 
 
 
